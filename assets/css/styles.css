@@ -15,6 +15,7 @@ body {
 
 :root {
     --primary-color: #143c3c;
+    --text-color_black: #152427;
     --text-color-black-gray: #575d5e;
     --text-color-white: #fff;
     --text-color-black-green: #143c3c;
@@ -33,6 +34,10 @@ body {
     border: 1.5px solid var(--primary-color);
     background: var(--primary-color);
     color: var(--text-color-white);
+}
+.btn:hover {
+    background: #e2eddf;
+    color: var(--primary-color);
 }
 a {
     text-decoration: none;
@@ -73,12 +78,14 @@ a {
     gap: 38px;
 }
 .nav__list-item a {
-    color: var(--text-color);
-
+    color: var(--text-color-black-gray);
     font-family: "Public Sans", sans-serif;
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 1.55; /* 155.556% */
+}
+.nav__list-item a:hover {
+    color: var(--text-color_black);
 }
 
 .header__btn {
