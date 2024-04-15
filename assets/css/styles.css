@@ -25,8 +25,10 @@ body {
     margin: 0 auto;
 }
 .btn {
+    font-family: "Public Sans", sans-serif;
     display: flex;
     justify-content: center;
+    font-size: 1.8rem;
     align-items: center;
     min-width: 173px;
     height: 57px;
@@ -42,7 +44,28 @@ body {
 a {
     text-decoration: none;
 }
+img {
+    object-fit: cover;
+}
 
+.heading {
+    color: var(--text-color_black);
+
+    font-size: 4.2rem;
+    font-weight: 600;
+    line-height: 1.23; /* 123.81% */
+}
+
+.text-style {
+    color: #575d5e;
+
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.7; /* 171.429% */
+}
+.deco {
+    position: absolute;
+}
 /* --------------------------------------- Header --------------------------------------- */
 .header {
     padding-top: 30px;
@@ -58,7 +81,13 @@ a {
     display: block;
     bottom: -12px;
     width: 100%;
-    border: 1px solid #dddcdced;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        #fff 0%,
+        #dddcdc 51.09%,
+        rgba(212, 212, 212, 0) 99.68%
+    );
 }
 .header__row::before {
     z-index: 1;
@@ -69,7 +98,7 @@ a {
     transform: translatex(-50%);
     bottom: -13px;
     width: 16px;
-    border: 2px solid #143c3c;
+    border: 1px solid #143c3c;
 }
 
 .nav__list {
@@ -86,13 +115,158 @@ a {
 }
 .nav__list-item a:hover {
     color: var(--text-color_black);
+    font-weight: 600;
 }
 
 .header__btn {
     margin-left: 88px;
-    font-family: "Public Sans";
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
     line-height: 28px; /* 155.556% */
+}
+/* --------------------------------------- Hero --------------------------------------- */
+/* left */
+.hero {
+    margin-top: 60px;
+    position: relative;
+}
+.hero__left {
+    margin-top: 50px;
+    width: 400px;
+    align-self: flex-start;
+}
+
+.hero__title {
+    font-family: "Public Sans", sans-serif;
+    width: 368px;
+    font-size: 5rem;
+    line-height: 1.2;
+    font-weight: 800;
+}
+.hero__desc {
+    font-family: "Public Sans", sans-serif;
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 1.55; /* 155.556% */
+}
+
+.hero__btn {
+    padding: 14px 26px;
+}
+
+.hero__circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #83a17d;
+    rotate: 45deg;
+}
+.hero__circle-boder {
+    margin-left: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border: 4px solid var(--text-color-black-green);
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    rotate: -45deg;
+    border-radius: 50%;
+    transition: rotate 0.5s;
+}
+
+.hero__watch-video {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero__circle-boder:hover,
+.hero__span:hover {
+    cursor: pointer;
+}
+.hero__circle-boder:hover,
+.hero__span:hover ~ .hero__circle-boder {
+    rotate: 155deg;
+    border-top-color: #83a17d;
+    border-left-color: #83a17d;
+}
+
+.hero__watch-video:hover .hero__span {
+    color: #83a17d;
+}
+
+.hero__circle-boder:hover .hero__circle,
+.hero__span:hover ~ .hero__circle-boder .hero__circle {
+    background-color: var(--text-color-black-green);
+    rotate: 80deg;
+}
+
+.hero__row {
+    margin-top: 42px;
+    display: flex;
+    align-items: center;
+}
+.hero__span {
+    color: #152427;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.66; /* 166.667% */
+    white-space: nowrap;
+}
+
+/* right */
+.hero__right {
+    margin-left: 76px;
+    display: flex;
+    position: relative;
+    gap: 20px;
+    height: 550px;
+}
+.hero_img {
+    width: 202px;
+    height: 466px;
+    border-top-left-radius: 110px;
+    border-top-right-radius: 110px;
+    border-bottom-left-radius: 110px;
+    border-bottom-right-radius: 110px;
+}
+.hero_img:nth-child(2) {
+    align-self: flex-end;
+}
+.hero__right-bgblur {
+    z-index: -1;
+    position: absolute;
+    bottom: 90px;
+    left: 145px;
+    width: 340px;
+    height: 340px;
+    border-radius: 340px;
+    background: #4dbb9a;
+    filter: blur(137px);
+}
+.hero_deco_1 {
+    top: -23px;
+    left: 745px;
+}
+.hero_deco_3 {
+    z-index: 1;
+    top: -14px;
+    left: 703px;
+}
+.hero_deco_2 {
+    bottom: -70px;
+    right: 510px;
+}
+.hero_deco_4 {
+    z-index: 1;
+    bottom: -45px;
+    right: 468px;
 }
