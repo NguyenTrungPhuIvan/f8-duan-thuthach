@@ -127,7 +127,8 @@
                 </div>
             </div>
         </header>
-        <main style="height: 5000px">
+        s
+        <main style="height: 6000px">
             <section class="hero">
                 <div class="content">
                     <div class="hero__row">
@@ -490,6 +491,141 @@
                     </section>
                 </div>
             </section>
+            <section class="project">
+                <div class="content">
+                    <div class="project__row">
+                        <h2 class="project__title heading heading--dash">
+                            A quick glance of our past projects
+                        </h2>
+                        <div class="project__subcontent">
+                            <p class="project__desc">
+                                Are you strive for the fast project simplicity
+                                and clarity. Great design is born of those two
+                                things.
+                            </p>
+                            <a href="" class="project__link"
+                                ><p>Browse all Projects</p>
+                                <svg
+                                    class="project__arrow"
+                                    width="22"
+                                    height="13"
+                                    viewBox="0 0 22 13"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M21 6.82353H0.999999M0.999999 6.82353L6.29412 1M0.999999 6.82353L6.29412 12"
+                                        stroke="currentColor"
+                                        stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project__video">
+                        <video id="videoDemo">
+                            <source
+                                src="./assets/video/video.mp4"
+                                type="video/mp4"
+                            />
+                        </video>
+                        <button
+                            onclick="playVideo()"
+                            class="project__btn-play-video"
+                            id="project__button__play"
+                        >
+                            <img
+                                src="./assets/icon/play.png"
+                                alt="play icon video"
+                            />
+                        </button>
+                        <img
+                            src="./assets/img/deco - 3.png"
+                            alt=""
+                            class="deco project__deco1"
+                        />
+                        <img
+                            src="./assets/img/deco - 2.png"
+                            alt=""
+                            class="deco project__deco2"
+                        />
+                    </div>
+                </div>
+            </section>
+            <section class="feature">
+                <div class="content">
+                    <h2 class="feature__title heading">
+                        Share the features that help your customers
+                    </h2>
+                    <p class="feature__desc text-style">
+                        You already know that the customer experience doesn't
+                        end with a sale — it's an ongoing work in progress that
+                        companies should be constantly seeking to improve and
+                        iterate on.
+                    </p>
+                    <section class="feature__list">
+                        <section class="feature__item">
+                            <img
+                                class="feature__item-icon"
+                                src="./assets/icon/feature-icon-2.svg"
+                                alt=""
+                            />
+                            <h3 class="feature__item-title">Blog</h3>
+                            <p class="feature__item-desc text-style">
+                                We’ve researched numerous agencies and complied
+                                a list of digital marketing agency blogs you
+                                should read to stay ahead of your rivals and
+                                succeed online!
+                            </p>
+                        </section>
+                        <section class="feature__item">
+                            <img
+                                class="feature__item-icon"
+                                src="./assets/icon/feature-icon-1.svg"
+                                alt=""
+                            />
+                            <h3 class="feature__item-title">Documention</h3>
+                            <p class="feature__item-desc text-style">
+                                In this article, we discuss the different types
+                                of documentation, what makes for great technical
+                                documentation, and provide examples.
+                            </p>
+                        </section>
+                        <section class="feature__item">
+                            <img
+                                class="feature__item-icon"
+                                src="./assets/icon/feature-icon-3.svg"
+                                alt=""
+                            />
+                            <h3 class="feature__item-title">Customers</h3>
+                            <p class="feature__item-desc text-style">
+                                Your customers have high expectations — and if
+                                your business can't meet them, they're going to
+                                leave you for your competitors.
+                            </p>
+                        </section>
+                    </section>
+                </div>
+            </section>
         </main>
+
+        <script>
+            var btn = document.getElementById("project__button__play");
+            var video = document.getElementById("videoDemo");
+            video.removeAttribute("controls");
+            video.setAttribute("muted", "");
+
+            function playVideo() {
+                if (video.paused) {
+                    video.play();
+                    btn.style.display = "none";
+                    video.setAttribute("controls", "");
+                } else {
+                    video.pause();
+                }
+            }
+        </script>
     </body>
 </html>
