@@ -829,3 +829,216 @@ img {
     margin-top: 12px;
     width: 286px;
 }
+/* --------------------------------------- blog --------------------------------------- */
+.blog {
+    margin-top: 184px;
+}
+.blog__title {
+    width: 520px;
+    margin-top: 10px;
+}
+.blog .heading--dash::before {
+    background: var(--text-color_black);
+    right: -50px;
+    width: 82px;
+}
+.blog__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blog__desc {
+    width: 409px;
+    line-height: 1.62;
+}
+.blog__list {
+    margin-top: 90px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.blog__item {
+    width: 360px;
+    border-radius: 40px;
+    transition: transform 0.25s;
+    box-shadow: 0px 6px 30px 0px rgba(91, 91, 91, 0.25);
+}
+
+.blog__item:hover {
+    box-shadow: 0px 12px 74px 0px rgba(91, 91, 91, 0.25);
+    transform: translateY(-20px);
+}
+.blog__img {
+    width: 360px;
+    height: 317px;
+    border-radius: 40px 40px 0px 0px;
+}
+
+.blog__item-content {
+    padding: 26px 30px;
+    display: flex;
+    flex-flow: column;
+}
+.blog__btn {
+    background: #e2eddf;
+    color: #000;
+    width: 107px;
+    height: 26px;
+    border-radius: 999px;
+
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.blog__btn:hover {
+    color: #fff;
+    background: var(--text-color-black-green);
+}
+.blog__item-title {
+    margin-top: 13px;
+    color: var(--Primary-color-black-green, #143c3c);
+
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.66; /* 166.667% */
+}
+.blog__separate {
+    width: 100%;
+    height: 1px;
+    background: #c4c4c4;
+    margin-top: 38px;
+}
+
+.blog__item:nth-child(3) .blog__separate {
+    margin-top: 71px;
+}
+
+.blog__date {
+    display: inline-block;
+    margin-left: auto;
+    margin-top: 15px;
+    color: var(--text-color-black-gray);
+    font-size: 1rem;
+    font-weight: 500;
+}
+/* --------------------------------------- footer --------------------------------------- */
+.footer {
+    margin-top: 102px;
+    background: #143c3c;
+    padding: 72px;
+    padding-bottom: 30px;
+}
+.footer .content {
+    display: flex;
+}
+.footer__row {
+    display: flex;
+}
+
+.footer__title {
+    color: #fff;
+    font-size: 3.2rem;
+    font-weight: 500;
+}
+.footer__email {
+    margin-top: 25px;
+    position: relative;
+    display: flex;
+}
+.footer__email::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -32px;
+    margin-top: 32px;
+    background: #6a8383;
+    height: 1px;
+    width: 354px;
+}
+#email,
+#email::placeholder {
+    width: 315;
+    height: 59px;
+    color: #6a8383;
+    font-size: 2.2rem;
+    font-weight: 600;
+    background: transparent;
+    border: none;
+    padding: 10px;
+}
+.footer__email-btn {
+    margin-top: 30px;
+    color: #c4c4c4;
+    background: transparent;
+    align-self: flex-end;
+}
+.footer__email-btn:hover {
+    cursor: pointer;
+}
+.footer__email-search {
+    width: 26px;
+    height: 16px;
+}
+.social-icon {
+    margin-top: 80px;
+    display: flex;
+    gap: 22px;
+}
+.social-icon__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    width: 52px;
+    height: 52px;
+    background: transparent;
+    border-radius: 50%;
+    border: 1px solid #265252;
+    transition: background-color 0.25s;
+}
+.social-icon__btn:hover {
+    background: #a75325;
+}
+
+.footer__right {
+    padding-top: 22px;
+    margin-left: 260px;
+}
+
+.footer__row {
+    display: flex;
+    gap: 50px;
+}
+.footer__item:first-child h3 {
+    color: #fff;
+    font-family: "Public Sans";
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.55; /* 155.556% */
+}
+.footer__item:nth-child(2) {
+    margin-top: 6px;
+}
+.footer__item a {
+    color: #6a8383;
+    font-family: "Public Sans";
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2.25; /* 225% */
+}
+.footer__separate {
+    margin-top: 45px;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        #143c3c 2.28%,
+        #295a5a 55.65%,
+        rgba(38, 82, 82, 0) 102.06%
+    );
+}
+.footer__copy {
+    margin-top: 50px;
+    text-align: center;
+}
