@@ -965,7 +965,9 @@ img {
     font-weight: 600;
     background: transparent;
     border: none;
-    padding: 10px;
+}
+#email {
+    padding: 10px 10px 10px 0;
 }
 .footer__email-btn {
     margin-top: 30px;
@@ -1026,6 +1028,10 @@ img {
     font-size: 16px;
     font-weight: 500;
     line-height: 2.25; /* 225% */
+    transition: opacity 0.25s;
+}
+.footer__item a:hover {
+    opacity: 0.75;
 }
 .footer__separate {
     margin-top: 45px;
