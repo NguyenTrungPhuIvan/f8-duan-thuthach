@@ -346,7 +346,9 @@ img {
     position: relative;
     width: 520px;
 }
-.services__title::after {
+
+.services .heading--dash::before {
+    right: 110px;
 }
 .services__row {
     display: flex;
@@ -373,6 +375,7 @@ img {
 }
 .services__button:nth-child(2) {
     rotate: 180deg;
+    margin-right: 73px;
 }
 .services__button:hover {
     background: var(--primary-color);
@@ -487,11 +490,10 @@ img {
     right: -9px;
     bottom: 8px;
     width: 143px;
-    height: 144px;
     border-radius: 8px;
     background: #fff;
     box-shadow: 0px 7px 54px 0px rgba(154, 154, 154, 0.25);
-    padding: 19px 23px 12px;
+    padding: 19px 23px 11px;
 }
 
 .box-info__title {
@@ -502,14 +504,16 @@ img {
 }
 
 .box-info__sub-title {
-    margin-top: 6px;
+    display: inline-block;
+    margin-top: 10px;
     color: var(--text-color-black-gray);
     font-family: "Public Sans";
     font-size: 1rem;
     font-weight: 400;
+    opacity: 0.5;
 }
 .box-info__progress {
-    margin-top: 10px;
+    margin-top: 12px;
     display: flex;
     gap: 8px;
     flex-flow: column;
@@ -695,7 +699,7 @@ img {
     color: #e7f9f9;
     width: 457px;
 }
-.heading--dash::before {
+.project .heading--dash::before {
     background: #83a17d;
     right: 90px;
 }
@@ -841,6 +845,7 @@ img {
     background: var(--text-color_black);
     right: -50px;
     width: 82px;
+    height: 3px;
 }
 .blog__row {
     display: flex;
@@ -850,7 +855,8 @@ img {
 
 .blog__desc {
     width: 409px;
-    line-height: 1.62;
+    font-size: 1.6rem;
+    line-height: 1.62; /* 162.5% */
 }
 .blog__list {
     margin-top: 90px;
@@ -869,6 +875,11 @@ img {
     box-shadow: 0px 12px 74px 0px rgba(91, 91, 91, 0.25);
     transform: translateY(-20px);
 }
+.blog__item:hover .blog__btn {
+    color: #fff;
+    background: var(--text-color-black-green);
+}
+
 .blog__img {
     width: 360px;
     height: 317px;
@@ -891,10 +902,7 @@ img {
     font-size: 1rem;
     font-weight: 600;
 }
-.blog__btn:hover {
-    color: #fff;
-    background: var(--text-color-black-green);
-}
+
 .blog__item-title {
     margin-top: 13px;
     color: var(--Primary-color-black-green, #143c3c);
@@ -970,7 +978,7 @@ img {
     padding: 10px 10px 10px 0;
 }
 .footer__email-btn {
-    margin-top: 30px;
+    margin-top: 32px;
     color: #c4c4c4;
     background: transparent;
     align-self: flex-end;
